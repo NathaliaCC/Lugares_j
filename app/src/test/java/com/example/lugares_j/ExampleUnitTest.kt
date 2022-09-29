@@ -1,4 +1,4 @@
-package com.lugares_j
+package com.example.lugares_j
 
 import org.junit.Test
 

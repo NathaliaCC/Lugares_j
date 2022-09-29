@@ -1,4 +1,4 @@
-package com.lugares_j
+package com.example.lugares_j
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.lugares_j", appContext.packageName)
+        assertEquals("com.example.lugares_j", appContext.packageName)
     }
 }
