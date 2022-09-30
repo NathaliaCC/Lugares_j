@@ -14,4 +14,15 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <string name="msg_nombre">Nombre del lugar</string>
+    <string name="msg_correo">Email (lugar@xxxx.xxxx)</string>
+    <string name="msg_telefono">Teléfono (9999-9999)</string>
+    <string name="msg_web">Sitio Web</string>
+    <string name="bt_add_lugar">Agregar</string>
+    <string name="msg_lugar_added">Lugar agregado</string>
+    <string name="msg_date">Faltan datos</string>
+
+
+
+
 </resources>

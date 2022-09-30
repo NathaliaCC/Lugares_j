@@ -19,7 +19,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.lugares"
+        applicationId "com.example.lugares_j"
         minSdk 27
         targetSdk 33
         versionCode 1
@@ -64,4 +64,8 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.4.3'
     kapt "androidx.room:room-compiler:2.4.3"
     implementation 'androidx.room:room-ktx:2.4.3'
+
+    // para utilizar con navegación de fragmentos
+    implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.5.2'
+
 }
