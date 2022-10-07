@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/addLugarFragment"
         android:name="com.example.lugares_j.ui.lugar.AddLugarFragment"
-        android:label="fragment_add_lugar"
+        android:label="@string/bt_add_lugar"
         tools:layout="@layout/fragment_add_lugar" >
         <action
             android:id="@+id/action_addLugarFragment_to_nav_lugar"
