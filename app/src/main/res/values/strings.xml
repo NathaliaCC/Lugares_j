@@ -18,11 +18,29 @@
     <string name="msg_correo">Email (lugar@xxxx.xxxx)</string>
     <string name="msg_telefono">Teléfono (9999-9999)</string>
     <string name="msg_web">Sitio Web</string>
-    <string name="bt_add_lugar">Agregar</string>
+    <string name="bt_add_lugar">Agregar Lugar</string>
     <string name="msg_lugar_added">Lugar agregado</string>
     <string name="msg_data">Faltan datos</string>
+    <string name="bt_update_lugar">Actualizar Lugar</string>
+    <string name="msg_update_added">Lugar actualizado</string>
+    <string name="bt_delete_lugar">Eliminar Lugar</string>
+    <string name="msg_deleted">Lugar eliminado</string>
+    <string name="msg_pregunta_delete">Esta seguro de eliminar el lugar?</string>
+    <string name="msg_si">Si?</string>
+    <string name="msg_no">No</string>
 
 
+    <string name="msg_enviar_correo">Enviar correo electrónico</string>
+    <string name="msg_phone_call">Realizar llamada telefónica</string>
+    <string name="msg_whatsapp_send">Enviar mensaje WhatsApp</string>
+    <string name="msg_web_view">Abrir sitio Web</string>
+    <string name="msg_map_view">Ver lugar en mapa</string>
+    <string name="tv_latitud_lb">Latitud</string>
+    <string name="tv_longitud_lb">Longitud</string>
+    <string name="tv_altura_lb">Altura</string>
+    <string name="msg_saludos">Saludos amigos</string>
+    <string name="msg_mensaje_correo">Le escribo este correo para</string>
+    <string name="error">Error</string>
 
 
 </resources>
