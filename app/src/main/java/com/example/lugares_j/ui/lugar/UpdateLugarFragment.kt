@@ -2,6 +2,7 @@ package com.example.lugares_j.ui.lugar
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -77,7 +78,26 @@ class UpdateLugarFragment : Fragment() {
     }
 
     private fun llamarLugar() {
+        val valor = binding.etTelefono.text.toString()
+        if(valor.isNotEmpty()){ // si el correo tiene algo, se intenta enviar el correo
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel:$valor")
+            if(requireActivity()
+                    .checkSelfPermission(android.Manifest.permission.CALL_PHONE)!=
+                PackageManager.PERMISSION_GRANTED){
 
+                //SI ESTAMOS ACA HAY QUE PEDIR AUTORIZACIÓN PARA HACER LA LLAMADA
+                requireActivity()
+                    .requestPermissions(
+                        arrayOf(android.Manifest.permission.CALL_PHONE),105)
+            }else{
+                // si se tiene el permiso de hacer la llamada
+                requireActivity().startActivity(intent)
+            }
+        } else{ // no hay info, no se puede realizar la acción
+            Toast.makeText(requireContext(),
+                getString(R.string.msg_data), Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun EnviarWhatsApp() {
@@ -111,6 +131,16 @@ class UpdateLugarFragment : Fragment() {
     }
 
     private fun verEnMapa() {
+        val latitud= binding.tvLatitud.text.toString().toDouble()
+        val longitud= binding.tvLongitud.text.toString().toDouble()
+        if(latitud.isFinite() && longitud.isFinite()){ // si se tienen valores reales en las cordenadas
+            val uri = "geo:$latitud, $longitud?z18" //z18 un zoom de 1800pies
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
+            startActivity(intent)
+        } else{ // no hay info, no se puede realizar la acción
+            Toast.makeText(requireContext(),
+                getString(R.string.msg_data), Toast.LENGTH_LONG).show()
+        }
 
     }
 
