@@ -13,16 +13,16 @@ import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.lugares_j.R
-import com.lugares.utiles.OtrosUtiles
+import com.example.lugares_j.utiles.OtrosUtiles
 import java.io.File
 import java.io.IOException
 
 class AudioUtiles(
-    private val actividad: Activity,
-    private val contexto: Context,
-    private val btAccion: ImageButton,
-    private val btPlay: ImageButton,
-    private val btDelete: ImageButton,
+    private val actividad: Activity,//actividad
+    private val contexto: Context,//contexto
+    private val btAccion: ImageButton,//botón de acción
+    private val btPlay: ImageButton, // botón de play
+    private val btDelete: ImageButton, // botón para eliminar
     private val msgIniciaNotaAudio: String,
     private val msgDetieneNotaAudio: String) {
 
@@ -37,7 +37,7 @@ class AudioUtiles(
     private var grabando: Boolean = false
     var audioFile: File = File.createTempFile("audio_", ".mp3")
 
-    private fun grabaStop() {
+    private fun grabaStop() { // metood
         if (ContextCompat.checkSelfPermission(contexto, Manifest.permission.RECORD_AUDIO) !=
             PackageManager.PERMISSION_GRANTED) {
             val permissions = arrayOf(Manifest.permission.RECORD_AUDIO)
@@ -54,7 +54,7 @@ class AudioUtiles(
         }
     }
 
-    private fun mediaRecorderInit() {
+    private fun mediaRecorderInit() { // inicia el micrófono
         if (audioFile.exists() && audioFile.isFile) {
             audioFile.delete()
         }
@@ -67,7 +67,7 @@ class AudioUtiles(
         mediaRecorder!!.setOutputFile(audioFile)
     }
 
-    private fun iniciaGrabacion() {
+    private fun iniciaGrabacion() { // iniciar la grabación
         try {
             mediaRecorder?.prepare()
             mediaRecorder?.start()

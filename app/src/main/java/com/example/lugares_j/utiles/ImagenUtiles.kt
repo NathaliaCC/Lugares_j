@@ -11,7 +11,7 @@ import android.widget.ImageView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.FileProvider
 import com.example.lugares_j.BuildConfig
-import com.lugares.utiles.OtrosUtiles
+import com.example.lugares_j.utiles.OtrosUtiles
 import java.io.File
 
 class ImagenUtiles (
