@@ -34,12 +34,11 @@ class AddLugarFragment : Fragment() {
     private var _binding: FragmentAddLugarBinding? = null
     private val binding get() = _binding!!
 
-
     private lateinit var audioUtiles: AudioUtiles
     private lateinit var imagenUtiles: ImagenUtiles
     private lateinit var tomarFotoActivity:ActivityResultLauncher<Intent>
 
-
+    /// cambio de commit
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -216,8 +215,6 @@ class AddLugarFragment : Fragment() {
                 Toast.LENGTH_SHORT).show()
         }
     }
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
