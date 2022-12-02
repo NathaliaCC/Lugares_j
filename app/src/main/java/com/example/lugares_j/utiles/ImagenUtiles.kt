@@ -14,7 +14,7 @@ import com.example.lugares_j.BuildConfig
 import com.example.lugares_j.utiles.OtrosUtiles
 import java.io.File
 /// commit
-
+// commit
 class ImagenUtiles (
 
     private val contexto: Context,
