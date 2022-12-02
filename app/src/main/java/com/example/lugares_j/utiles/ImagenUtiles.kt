@@ -13,8 +13,10 @@ import androidx.core.content.FileProvider
 import com.example.lugares_j.BuildConfig
 import com.example.lugares_j.utiles.OtrosUtiles
 import java.io.File
+/// commit
 
 class ImagenUtiles (
+
     private val contexto: Context,
     btPhoto: ImageButton,
     btRotaL: ImageButton,
